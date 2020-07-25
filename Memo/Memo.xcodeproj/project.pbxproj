@@ -205,13 +205,20 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = zluan.io;
+				TargetAttributes = {
+					6EA0E337DA1389719C9D56DE = {
+						DevelopmentTeam = 7368226YQ4;
+					};
+				};
 			};
 			buildConfigurationList = 6EA0EFAEE90577A45506A306 /* Build configuration list for PBXProject "Memo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
+				Base,
 			);
 			mainGroup = 6EA0ECF708C5266242641126;
 			productRefGroup = 6EA0E8202DC1D27EE5585076 /* Products */;
@@ -386,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_ASSET_PATHS = "\"Memo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7368226YQ4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Memo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -471,8 +479,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -496,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_ASSET_PATHS = "\"Memo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7368226YQ4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Memo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -516,6 +524,7 @@
 				6EA0EBA81C2FE8578F33B32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EA0E34FE41511164DD534D5 /* Build configuration list for PBXNativeTarget "Memo" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +533,7 @@
 				6EA0EAEEE5A432BA8602329C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EA0E36203623DFB715FEC57 /* Build configuration list for PBXNativeTarget "MemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +542,7 @@
 				6EA0E52A78266828A85F3F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EA0EFAEE90577A45506A306 /* Build configuration list for PBXProject "Memo" */ = {
 			isa = XCConfigurationList;
