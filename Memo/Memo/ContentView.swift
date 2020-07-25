@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    let viewModel: EmojiMemoGame
+    @ObservedObject var viewModel: EmojiMemoGame
 
     var body: some View {
         HStack {

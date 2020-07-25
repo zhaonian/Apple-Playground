@@ -5,8 +5,8 @@
 
 import Foundation
 
-class EmojiMemoGame {
-    private var game: MemoGame<String> = createEmojiMemoGame()
+class EmojiMemoGame: ObservableObject {
+    @Published private var game: MemoGame<String> = createEmojiMemoGame()
 
     private static func createEmojiMemoGame() -> MemoGame<String> {
         let cardContents = ["🐱", "💩", "😈"]

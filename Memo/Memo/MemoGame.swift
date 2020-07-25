@@ -18,8 +18,18 @@ struct MemoGame<CardContent> {
         }
     }
 
-    func chooseCard(card: Card) {
+    mutating func chooseCard(card: Card) {
         print("Card chosen: \(card.content)")
+        self.cards[index(of: card)].isFaceUp = !self.cards[index(of: card)].isFaceUp
+    }
+
+    private func index(of card: Card) -> Int {
+        for (index, element) in cards.enumerated() {
+            if element.id == card.id {
+                return index
+            }
+        }
+        return -1
     }
 
     struct Card: Identifiable {
