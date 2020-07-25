@@ -20,9 +20,8 @@ struct ContentView: View {
                 }
             }
         }
-        .padding()
-        .foregroundColor(Color.orange)
-        .font(.largeTitle)
+                .padding()
+                .foregroundColor(Color.orange)
     }
 }
 
@@ -30,17 +29,32 @@ struct CardView: View {
     var card: MemoGame<String>.Card
 
     var body: some View {
-        ZStack {
-            if card.isFaceUp {
-                RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3.0)
-                Text(card.content).font(Font.largeTitle)
-            } else {
-                RoundedRectangle(cornerRadius: 10.0).fill(Color.orange)
-                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3.0)
-            }
+        GeometryReader { geometry in
+            self.body(for: geometry.size)
         }
     }
+
+    private func body(for size: CGSize) -> some View {
+        ZStack {
+            if self.card.isFaceUp {
+                RoundedRectangle(cornerRadius: self.cornerRadius).fill(Color.white)
+                RoundedRectangle(cornerRadius: self.cornerRadius).stroke(lineWidth: self.edgeLineWith)
+                Text(self.card.content)
+            } else {
+                RoundedRectangle(cornerRadius: self.cornerRadius).fill(Color.orange)
+                RoundedRectangle(cornerRadius: self.cornerRadius).stroke(lineWidth: self.edgeLineWith)
+            }
+        }
+                .font(Font.system(size: fontSize(for: size)))
+    }
+
+    private func fontSize(for size: CGSize) -> CGFloat {
+        min(size.width, size.height) * self.fontScaleFactor
+    }
+
+    private let cornerRadius: CGFloat = 10.0
+    private let edgeLineWith: CGFloat = 3.0
+    private let fontScaleFactor: CGFloat = 0.75
 }
 
 struct ContentView_Previews: PreviewProvider {
