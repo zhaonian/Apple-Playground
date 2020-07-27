@@ -20,21 +20,17 @@ struct MemoGame<CardContent> {
 
     mutating func chooseCard(card: Card) {
         print("Card chosen: \(card.content)")
-        self.cards[index(of: card)].isFaceUp = !self.cards[index(of: card)].isFaceUp
-    }
-
-    private func index(of card: Card) -> Int {
-        for (index, element) in cards.enumerated() {
-            if element.id == card.id {
-                return index
-            }
+        if let chosenCardIndex = self.cards.firstIndex(matching: card),
+           !cards[chosenCardIndex].isFaceUp,
+           !cards[chosenCardIndex].isMatched {
+            self.cards[chosenCardIndex].isFaceUp = !self.cards[chosenCardIndex].isFaceUp
         }
-        return -1
     }
 
     struct Card: Identifiable {
         var id: Int
-        var isFaceUp: Bool
+        var isFaceUp: Bool = false
+        var isMatched: Bool = false
         var content: CardContent
     }
 }
