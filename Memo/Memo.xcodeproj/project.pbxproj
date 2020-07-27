@@ -17,6 +17,9 @@
 		6EA0E979E4BC89C177BC039F /* MemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0E9AAB65F2A9DD940D708 /* MemoUITests.swift */; };
 		6EA0EAAC46A5FFD454F130E9 /* EmojiMemoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0E552540B85C516A2E1CC /* EmojiMemoGame.swift */; };
 		6EA0EAB7ADC4E29FEB23A176 /* MemoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0E8007741A3D505A9700F /* MemoGame.swift */; };
+		6EA0EBA1AF8C7BDAAE365BEB /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0E7178CFECEA232542328 /* Array+Identifiable.swift */; };
+		6EA0EDBADCA2CF6A5DA687AF /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0E6AE6333FBE7EFE2CCCA /* Array+Only.swift */; };
+		6EA0EDF4D3A70B70E663B40A /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0E2F51D3153BBD19D9AD0 /* GridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +42,13 @@
 /* Begin PBXFileReference section */
 		6EA0E05B55024F2460F22974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		6EA0E2676CE43F7C811E9C53 /* MemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA0E2F51D3153BBD19D9AD0 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		6EA0E36FF2362B1D8C4E2F9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EA0E395551DA5627C6801B2 /* MemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTests.swift; sourceTree = "<group>"; };
 		6EA0E552540B85C516A2E1CC /* EmojiMemoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiMemoGame.swift; sourceTree = "<group>"; };
 		6EA0E67CF52D24FC0D0F5978 /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA0E6AE6333FBE7EFE2CCCA /* Array+Only.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
+		6EA0E7178CFECEA232542328 /* Array+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
 		6EA0E7FC95CE54A14741C775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		6EA0E8007741A3D505A9700F /* MemoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoGame.swift; sourceTree = "<group>"; };
 		6EA0E926BB65C05007B3022D /* MemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +144,9 @@
 				6EA0E9BEB7A688627A0355D9 /* Preview Content */,
 				6EA0E8007741A3D505A9700F /* MemoGame.swift */,
 				6EA0E552540B85C516A2E1CC /* EmojiMemoGame.swift */,
+				6EA0E2F51D3153BBD19D9AD0 /* GridLayout.swift */,
+				6EA0E7178CFECEA232542328 /* Array+Identifiable.swift */,
+				6EA0E6AE6333FBE7EFE2CCCA /* Array+Only.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -269,6 +278,9 @@
 				6EA0E16F5D56AFB16AEB674D /* ContentView.swift in Sources */,
 				6EA0EAB7ADC4E29FEB23A176 /* MemoGame.swift in Sources */,
 				6EA0EAAC46A5FFD454F130E9 /* EmojiMemoGame.swift in Sources */,
+				6EA0EDF4D3A70B70E663B40A /* GridLayout.swift in Sources */,
+				6EA0EBA1AF8C7BDAAE365BEB /* Array+Identifiable.swift in Sources */,
+				6EA0EDBADCA2CF6A5DA687AF /* Array+Only.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
