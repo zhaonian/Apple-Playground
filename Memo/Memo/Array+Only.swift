@@ -6,7 +6,7 @@
 import Foundation
 
 extension Array {
-    var Only: Element? {
+    var only: Element? {
         count == 1 ? first : nil
     }
 }

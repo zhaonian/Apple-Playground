@@ -8,7 +8,10 @@ import Foundation
 struct MemoGame<CardContent> where CardContent: Equatable {
 
     var cards: Array<Card>
-    var indexOfTheOneAndOnlyFaceUpCard: Int?
+    var indexOfTheOneAndOnlyFaceUpCard: Int? {
+        get { cards.indices.filter { index in cards[index].isFaceUp }.only }
+        set { cards.indices.forEach { index in self.cards[index].isFaceUp = index == newValue } }
+    }
 
     init(totalNumberOfPairs: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
@@ -29,14 +32,10 @@ struct MemoGame<CardContent> where CardContent: Equatable {
                     self.cards[chosenCardIndex].isMatched = true
                     self.cards[potentialMatchedCardIndex].isMatched = true
                 }
-                indexOfTheOneAndOnlyFaceUpCard = nil
+                self.cards[chosenCardIndex].isFaceUp = true
             } else {
-                for index in self.cards.indices {
-                    self.cards[index].isFaceUp = false
-                }
                 indexOfTheOneAndOnlyFaceUpCard = chosenCardIndex
             }
-            self.cards[chosenCardIndex].isFaceUp = true
         }
     }
 
